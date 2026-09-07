@@ -1,0 +1,6 @@
+@KnowledgeCenter_HostAddress = http://localhost:5065
+
+GET {{KnowledgeCenter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

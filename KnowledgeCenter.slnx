@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="KnowledgeCenter.Application/KnowledgeCenter.Application.csproj" />
+  <Project Path="KnowledgeCenter.Domain/KnowledgeCenter.Domain.csproj" />
+  <Project Path="KnowledgeCenter.Infrastructure/KnowledgeCenter.Infrastructure.csproj" />
+  <Project Path="KnowledgeCenter/KnowledgeCenter.csproj" />
+</Solution>
