@@ -1,8 +1,7 @@
 ﻿namespace KnowledgeCenter.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
-        public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string PhoneNumber { get; private set; } = string.Empty;
         public int Age { get; private set; }
@@ -10,7 +9,7 @@
         public string Email { get; private set; }
         public string Document { get; private set; }
 
-        public User(Guid id, string name, string phoneNumber, int age, DateTime birthDate, string email, string document)
+        public User(Guid id, string name, string phoneNumber, int age, DateTime birthDate, string email, string document, string createdBy, DateTime createdAt, DateTime? updatedAt, DateTime? deletedAt)
         {
             Id = id;
             Name = name;
@@ -19,6 +18,10 @@
             BirthDate = birthDate;
             Email = email;
             Document = document;
+            CreatedBy = createdBy;
+            CreatedAt = createdAt;
+            UpdatedAt = updatedAt;
+            DeletedAt = deletedAt;
         }
     }
 }

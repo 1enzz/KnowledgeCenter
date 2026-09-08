@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace KnowledgeCenter.Infrastructure.Configurations
 {
-    public class UserConfiguration : IEntityTypeConfiguration<User>
+    public class UserConfiguration : BaseEntityConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<User> builder) 
+        public override void Configure(EntityTypeBuilder<User> builder) 
         {
-            builder.ToTable("tb_Users");
+            base.Configure(builder);
 
-            builder.HasKey(p => p.Id);
+            builder.ToTable("tb_Users");
 
             builder.Property(p => p.Name)
                 .IsRequired()
